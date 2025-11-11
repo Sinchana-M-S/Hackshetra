@@ -21,6 +21,7 @@ import CoursePlayer from './pages/CoursePlayer';
 import Profile from './pages/Profile';
 import FloatingChatbot from './components/FloatingChatbot';
 import Footer from './components/Footer';
+import AI from './pages/AI';
 
 function App() {
   const { theme } = useThemeStore();
@@ -64,6 +65,8 @@ function App() {
             {/* PUBLIC course pages */}
             <Route path="/course/:id" element={<CourseDetail />} />
             <Route path="/course/:id/play" element={<CoursePlayer />} />
+            <Route path="/ai" element={<AI />} />
+
 
             {/* ✅ Student Routes – all public */}
             <Route path="/student/courses" element={<StudentCourses />} />
@@ -85,7 +88,7 @@ function App() {
         </main>
 
         {/* ✅ Floating chatbot always visible */}
-        <FloatingChatbot />
+         {location.pathname === "/" && <FloatingChatbot />}
 
         <Toaster
           position="top-right"
