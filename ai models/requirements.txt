@@ -1,0 +1,28 @@
+# --- Core Framework ---
+flask==3.0.3
+flask-cors==4.0.0
+werkzeug==3.0.3
+python-dotenv==1.0.1
+requests==2.32.3
+gunicorn==22.0.0
+
+# --- Logging & Utilities ---
+uuid==1.30
+pillow==10.3.0
+
+# --- File & PDF Processing ---
+pdf2image==1.17.0
+pytesseract==0.3.10
+
+# --- AI & NLP Related ---
+# These are placeholders for your custom model packages
+# (Make sure sarvasva_core and video_processor are importable modules)
+# If these are local folders, keep them as editable installs:
+# -e ./sarvasva_core
+# -e ./video_processor
+
+# --- Optional: For Speech/Audio Handling ---
+pydub==0.25.1
+
+# --- Async / Background Tasks (if needed by video_processor) ---
+aiohttp==3.9.5
